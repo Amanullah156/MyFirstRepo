@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    
+    <title>My Project</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    h2 {
+        text-align : center;
+        margin-bottom :10px;
+    }
+    
+        input  {
+            padding: 8px;
+            margin: 5px;
+        }
+       button {
+         color : white;
+         padding : 8px;
+         margin: 5px;
+         background-color: red;
+       }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Text</h2>
+    <input type="text" id="textInput" placeholder="Enter value">
+    <button onclick="addToTable()">Add</button>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Sr:No</th>
+                <th>Item</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+
+    <script>
+        // Array  contains 5 elements
+        let dataArray = ["Zubair", "Sohail", "Taha", "Ilyas", "Amanullah"]; 
+
+        function addToTable() {
+            let inputText = document.getElementById("textInput").value;
+            if (inputText.trim() === "") {
+                alert("Please enter a valid value!");
+                return;
+            }
+
+            dataArray.push(inputText); 
+            updateTable(); 
+            document.getElementById("textInput").value = ""; // Clear input field
+        }
+
+        function updateTable() {
+            let tableBody = document.querySelector("#dataTable tbody");
+            tableBody.innerHTML = ""; // Clear existing data
+
+            dataArray.forEach((value, index) => {
+                let row = `<tr>
+                    <td>${index + 1}</td>
+                    <td>${value}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Initialize table with default values
+        updateTable();
+    </script>
+
+</body>
+</html>
