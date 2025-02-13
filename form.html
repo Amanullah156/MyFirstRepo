@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title> Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>   
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    
+    border-radius: 5px;
+}
+
+} 
+</style>
+<body>
+
+    <div class="container">
+        <h2> Registration Form</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name"  required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"  required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob"  required>
+
+            <label for="gender">Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male"  value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female"   value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="btech">B.Tech</option>
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+                <option value="mba">MBA</option>
+            </select>
+
+            <label for="hobbies">Hobbies:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sports"  value="sports">
+                <label for="sports">Sports</label>
+
+                <input type="checkbox" id="reading"  value="reading">
+                <label for="reading">Reading</label>
+
+                <input type="checkbox" id="music"  value="music">
+                <label for="music">Music</label>
+            </div>
+
+            <label for="address">Address:</label>
+            <textarea id="address"  rows="3" required></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
