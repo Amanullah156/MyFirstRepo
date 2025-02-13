@@ -1,57 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Basic Header </title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/style.css"/>
+ 
+    <title> Table</title>
+  
+ 
+    <style>
+        body {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
-<style>  
-
-header {
-    display: flex;a
-    align-items: center;
-    padding: 15px 20px;
-    background-color: blue;
-    color: white;
-}
-
-.logo img {
-    height: 50px; /* Adjust size as needed */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}</style>
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-               
-            </ul>
-        </nav>
-    </header>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>25</td>
+            <td>Karachi</td>
+        </tr>
+        <tr>
+            <td>Ayesha</td>
+            <td>22</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>Ahmed</td>
+            <td>30</td>
+            <td>Islamabad</td>
+        </tr>
+        <tr>
+            <td>Fatima</td>
+            <td>28</td>
+            <td>Quetta</td>
+        </tr>
+      <tr>
+            <td>Sohail</td>
+            <td>15</td>
+            <td>Ghotki</td>
+        </tr>
+      <tr>
+            <td>Shahzaib</td>
+            <td>20</td>
+            <td>Jarwar</td>
+        </tr>
+      <tr>
+            <td>Samiullah</td>
+            <td>5</td>
+            <td>Sarhad</td>
+        </tr>
+      <tr>
+            <td>Parvez</td>
+            <td>18</td>
+            <td>Khanpur</td>
+        </tr>
+      <tr>
+            <td>AmanUllah</td>
+            <td>17</td>
+            <td>Hydarabad</td>
+        </tr>
+      <tr>
+            <td>Fatima</td>
+            <td>28</td>
+            <td>Quetta</td>
+        </tr>
+      <tr>
+            <td>Jawad</td>
+            <td>19</td>
+            <td>Ghotki</td>
+        </tr>
+      <tr>
+            <td> Zubair </td>
+            <td>28</td>
+            <td>Quetta</td>
+        </tr> 
+      <tr>
+          
+    </table>
 
 </body>
 </html>
+ 
